@@ -9,6 +9,8 @@ use Template::Caribou::Tags::HTML::Extended ':all';
 
 use Template::Caribou;
 
+has '+indent' => default => 0;
+
 local *::RAW;
 open ::RAW, '>', \my $raw;
 

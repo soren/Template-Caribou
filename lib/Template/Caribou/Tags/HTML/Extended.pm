@@ -34,10 +34,10 @@ For the moment, only I<html 5> (or I<html5>) is supported as a type.
 
 sub doctype($type="html 5") {
     if ( $type =~ /^html\s?5/ ) {
-        return ($Template::Caribou::TEMPLATE || 'Template::Caribou::Role')->render(sub{ print ::RAW "<!DOCTYPE html>\n" } );
+        return Template::Caribou::Tags::print_raw( "<!DOCTYPE html>\n" );
     }
 
-    die "type '$type' not supported";
+    croak "type '$type' not supported";
 }
 
 =head2 favicon $url
