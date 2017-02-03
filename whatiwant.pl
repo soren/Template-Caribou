@@ -8,7 +8,7 @@ package MyFoo {
 use Template::Caribou;
 
 template hello => sub {
-    'dear';
+    'world';
 };
 }
 
@@ -19,7 +19,7 @@ use Moose;
 with 'Template::Caribou';
 
 __PACKAGE__->template( hello => sub {
-    'dear';
+    'world';
 } );
 
 }
